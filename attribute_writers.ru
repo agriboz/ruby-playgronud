@@ -1,7 +1,6 @@
-# Attribute Readers
+# Attribute Writers
 
-# An attribute reader returns the value of an instance variable.
-# An attribute reader exposes an instance variable.
+# An attribute writer allows setting an instance variable.
 
 # Person class
 class Person
@@ -13,7 +12,13 @@ class Person
   def full_name
     @surname + @name
   end
+
+  def password=(password)
+    @password = password
+  end
+
 end
 
 person = Person.new('Can', 'Agriboz')
-p person.full_name
+person.password = 'Super secret'
+p person
